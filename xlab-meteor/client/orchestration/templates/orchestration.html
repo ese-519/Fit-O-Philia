@@ -1,0 +1,163 @@
+<!-- 
+1. fix adding to effect (checking if the function save_dict require previous insertion into dictstack)
+3. the movie should be same size as controllers
+4. save functions. 
+5. add functions.
+5.a need to change all #select-result to currentSelection
+6. there is a place in main.js which color = color * 256;
+6. edit functions. -->
+<template name="orchestration">
+  <link href="stylesheets/jquery.selectbox.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="lib/jquery.selectbox-0.2.js"></script>  
+  <script type="text/javascript" src="lib/jquery.ui.touch-punch.min.js"></script>  
+
+  <span id="chromeFix"></span>
+
+
+  <body >
+  <div id="mtitle" class="bright">{{name}}</div>
+   <div id="Panel" style="height:75%; max-height:600px; overflow:hidden;" >
+
+    <table id="mainContent" border="0" cellpadding="0" cellspacing="0" style="border:none;height:100%; ">
+      <tr>
+        <td style="background-color:#1a191b; padding:20px 0; text-align:center;" valign="top" >
+          <div id="loadvideo" style="display:none; border:none;">
+            url:
+            <input type="text" class = "input name" id="loadvideourl">
+            name:
+            <input type="text" class = "input name" id="loadvideoname">
+            <a class="button tiny" id = "loadvideobutton">Load Video</a>
+          </div>
+
+              <video id="videoId"  controls="true" style="height:70%; max-height:400px; margin:0px;  padding:0;" type='video/mp4'>
+              <!--<source src="https://s3.amazonaws.com/xlab-media/matrixClip.mp4" type="video/mp4">-->
+              <source src="{{source}}" type="video/mp4">
+              </video>
+            
+          </td>
+          <td width="2"  style="background-color:#000;"></td>
+
+          <td id="OcontrolPanel" width="60%" valign="top">  <!-- from here -->
+           
+  <div class="cp_cfrm_btn" > 
+  <div class="button cp_btn" id="lights">lights</div>
+  <div class="button cp_btn" id="vest">vest</div>
+  <div class="button cp_btn" id="couch">couch</div>
+</div>
+  <div id="cp_organizer">
+        
+        <div id="effect_list_wrapper_duration"><select name="effect_list_duration" id="effect_list_duration" tabindex="1" >
+               
+               <option value="">Select Required duration</option>
+             </select>
+            <div class="button cp_btn" id="done">Done</div>
+
+        </div>
+        
+        
+  </div>
+  <div id="presets">
+      <!--<img src="images/p1.png" title="kick">
+      <img src="images/p2.png" title="transform">
+      <img src="images/p3.png" title="shooting"><br><br>
+      <img src="images/p4.png" title="knife">
+      <img src="images/p5.png" title="dodging_bullets">
+      <img src="images/p6.png" title="dive">-->
+      <input type="image" src="images/p1.png" name="kick" id="kick_light" value="kick" title="kick">
+      <input type="image" src="images/p2.png" name="Shooting" id="shooting_light" value="Shooting" title="Shooting">
+      <input type="image" src="images/p5.png" name="dodging_bullets" id="dodging_bullets_light" value="dodging_bullets" title="dodging_bullets">
+      <input type="image" src="images/p6.png" name="transform" id="transform_light" value="transform" title="transform">
+      
+      
+  </div>
+
+  <div id="presets1">
+      <input type="image" src="images/creepy1.jpg" name="Creepy" id="Creepy_vest" value="Creepy" title="Creepy" />
+      <input type="image" src="images/shooting.jpg" name="Shooting" id="shooting_vest" value="Shooting" title="Shooting" />
+      <input type="image" src="images/explode.jpg" name="LeftStrongExplode" id="LeftStrongExplode_vest" value="LeftStrongExplode" title="LeftStrongExplode" />
+      <input type="image" src="images/explode1.jpg" name="RightSideExplode" id="RightSideExplode_vest" value="RightSideExplode" title="RightSideExplode" />
+  </div>
+  
+  <div id="presets2">
+      <input type="image" src="images/kick.jpg" name="kick" id="kick_couch" value="kick" title="kick">
+      <input type="image" src="images/shooting.jpg" name="shoot" id="shoot_couch" value="shoot" title="shoot">
+      <input type="image" src="images/knife.jpg" name="knife" id="knife_couch" value="knife" title="knife">
+      <input type="image" src="images/wiggle.jpg" name="wiggle" id="wiggle_couch" value="wiggle" title="wiggle">
+  </div>
+  <!--<div class="cp_cfrm_btn" >
+  <div class="button cp_btn" id="close">close</div>
+</div>-->
+</td>
+</tr>
+
+</table>
+</div>
+
+
+<div id="MainTimeLineFooter" style="width:100%;">
+  <!--<div class="button cp_btn" id="test_effect">add effect</div>-->
+  <div class="button cp_btn" id="addTotimeline">Add Effect</div>
+  <div class="button cp_btn" id="removeFromtimeline">Delete</div>
+  <div class="button cp_btn" id="clear">Clear</div>
+  <div class="button cp_btn" id="saveData">Save Data</div>
+  <div class="button cp_btn" id="updateData">Update</div>
+  <table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="Mleft"><span  id="amount">00:00:00</span></td>
+      <td id="timecode_bar"><div id="time"></div><div id="slider"></div><div id="needle"></div></td>
+    </tr>
+    <tr>
+      <td class="Mleft_layer"><a href></a></td>
+      <td><div id="timelineContainer"> <div id="effecttimelines" style="margin:0px; width:100%;"></div></div></td>
+    </tr>
+  </table>
+
+
+
+</div>
+<!-- this the end of main canvas-->
+
+<div class="row">
+        <div class="large-2 columns">.</div>
+        <div class="large-8 columns">
+            <ul class="stack-for-small round secondary button-group text-center">
+                <li><a href="#" id="playlist" class='button'>Playlist</a></li>
+               
+            </ul>
+        </div>
+        <div class="large-2 columns">.</div>
+    </div>
+
+</body>
+</template>
+
+
+<template name="addvideo">
+  <link href="stylesheets/jquery.selectbox.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="lib/jquery.selectbox-0.2.js"></script>  
+  <script type="text/javascript" src="lib/jquery.ui.touch-punch.min.js"></script>  
+
+  <span id="chromeFix"></span>
+
+  <body>
+    
+     
+    <div class="row">
+        <div class="large-2 columns">.</div>
+        <div class="large-8 columns">
+
+            <ul class="stack-for-small round secondary button-group text-center">
+                <li><a href="#" id="cancelvideo" class='button'>Playlist</a></li>               
+            </ul>
+            <form method="get">
+            <input type="text" name="newname" placeholder="enter name of clip here" />
+            <input type="text" name="url" placeholder="enter clip link here" />
+            <!--<input type="text" name="thumbnail" placeholder="enter poster link here" />-->
+            <input type="submit" class='button' value="Upload"/>
+            </form>
+        </div>
+        <div class="large-2 columns">.</div>
+    </div>
+
+  </body>
+</template>

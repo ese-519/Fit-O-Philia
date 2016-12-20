@@ -1,0 +1,42 @@
+<template name='videoDetails'>
+    <div class="row">
+        <div class="large-12 columns">
+            <h5>{{moduleName}}</h5>
+        </div>
+    </div>
+    <br>
+    <br>
+    {{#each videoList}}
+    <div class="row">
+        <div class="large-1 small-1 columns">.</div>
+        <div class="large-4 small-5 columns">
+            <!--<video width="320" height="240" >
+            <source src={{videoSource}} type="video/mp4">
+            </video>-->
+            <!--img src="{{thumbnail}}" title="{{name}}" height="300" width="300">-->
+            <video id='videos' width="320" height="240">
+            <source src = {{videoSource}} type="video/mp4">
+            </video>
+            <a href="#" id='play' src={{videoSource}} metaSource={{metaSource}} name={{name}} class='button' style="height:57px;width:330px;font-size:18px">{{name}}</a>
+        </div>
+        <div class="large-7 small-7 columns">
+                <center>
+                <b>
+            <h6>Description: {{name}}</h6>
+                </b>
+              </center>
+        </div>                       
+    </div>
+    {{/each}}
+    <div class="row">
+        <div class="large-2 columns">.</div>
+        <div class="large-8 columns">
+            <ul class="stack-for-small round secondary button-group text-center">
+                <li><a href="#" id="mainMenu" class='button'>Main Menu</a></li>
+            </ul>
+        </div>
+        <div class="large-2 columns">.</div>
+    </div>
+    
+</template>
+

@@ -1,0 +1,44 @@
+<template name="singleVideo">
+    <div class="sticky fixed">
+        <nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="http://xlab.upenn.edu">MythBusters@xLab</a></h1>
+                </li>
+                <li class="toggle-topbar menu-icon">
+                    <a href="#">
+                        <span>Menu</span>
+                    </a>
+                </li>
+            </ul>
+            <section class="top-bar-section">
+                <ul class="center-right">
+                    {{> loginButtons}}
+                </ul>
+            </section>
+        </nav>
+    </div>
+    <img src="/images/background.jpg" class="bg" />
+    <br> {{#if currentUser}}
+    <div class="row">
+        <div class="large-12 columns">
+            <div class="tagline">
+                <h3>Fit-O-Philia</h3>
+                <i>
+                <h5>Your very own custom workout buddy!</h5>
+                </i>
+                <div class="dp" id = 'dumbbell_photo'>
+                    <img src="/images/motivation.gif" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="content">
+            <!--{{> moduleSelection}}-->
+            {{> UI.dynamic template=screenTemplates}}
+        </div>
+    </div>
+    {{else}} {{> landingPage}} {{/if}}
+ 
+</template>

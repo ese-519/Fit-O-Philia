@@ -1,0 +1,18 @@
+
+
+
+<template name='eventDisplay'>
+<div class="large-12 columns">
+   <div class="row">
+      {{#each adList}}                  
+      <div class="large-4 small-6 columns">
+         <img src={{location}}>
+         <div class="panel">
+               <a href={{url}} class="radius button">Shop</a>
+               <h5>{{name}}</h5>                              
+         </div>
+      </div>
+     {{/each}}
+   </div>   
+</div>
+</template>
