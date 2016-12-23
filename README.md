@@ -1,21 +1,16 @@
-PROJECT NAME
+PROJECT Fit-O-Philia
 ============
 
 **University of Pennsylvania, ESE 519: Real Time and Embedded Systems**
 
-* TEAM MEMBER NAMES
-* [Blog](https://devpost.com/software/project-name) (TODO: Link to devpost submission)
+* Fan Zhang, Karthik Anantha Ram & Sanjeet Phatak
+* https://devpost.com/software/cloud-based-dumbbell-activity-tracker
 
 ### DESCRIPTION AND GOALS
-(TODO: Add a brief description of the project and Final Goals)
+The objective of the project is develop an  independent system that assists a user during his/her workout routine. The system provides fitness solutions by delievering media content, recives feeback on how the user is working out through the wearbale devices and head gear, dynamically adpats and indicates to the user on where he/she is going wrong in the excercise tby performing statistical analysis on the IMU data gathered from the interactive devices.
 
 ### VIDEO
-[![](images/Thumb.jpg)](https://www.youtube.com/watch?v=vgEyvazwrU8)
+https://www.youtube.com/watch?v=ztR8gBI4WXw&feature=youtu.be
 
 ### IMAGES and GIFs
-Add images and screenshot of your product, user iterface, etc. Animated GIFs of User interfaces would be preferred.
-
-![](images/animated.gif)
-
-### BUILD INSTRUCTIONS
-TODO: Steps to follow for anyone to use this code
+![](images/dumbbells.jpg)

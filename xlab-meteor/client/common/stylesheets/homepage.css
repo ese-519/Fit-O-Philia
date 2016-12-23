@@ -1,0 +1,196 @@
+.top-bar {
+  /*Set up the top bar*/
+  background: #c60303;
+  /*height: 50px;
+  opacity: 1.0;*/
+}
+
+.top-bar .name  h1 a img {
+  /* Set up the top bar for logo */
+  width: 90px;
+  padding-top: 10px;
+}
+
+/*ul.right{
+  padding: 3px 5px;
+}*/
+
+img.bg {
+      /* Set rules to fill background */
+      min-height: 100%;
+      min-width: 1024px;
+      
+      /* Set up proportionate scaling */
+      width: 100%;
+      height: auto;
+      
+      /* Set up positioning */
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      opacity: 0.9;
+      margin-top: 45px;
+    }
+    
+    @media screen and (max-width: 1024px){
+      img.bg {
+        left: 50%;
+        margin-left: -512px; }
+    }
+
+.row .frontpage{
+  padding-top: 50px;
+}
+
+.row .large-12 .large h1 a img {
+  margin-left: 25%;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 10px;
+}
+
+.row .large-12 .tagline h1 {
+  margin-left: 12%;
+  text-align: center;
+  color: #f4f2f2;
+  font-size: 14px;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: #f4f2f2;
+  width: 75%;
+}
+
+.row .large-12 .tagline h3 {
+  margin-left: 12%;
+  text-align: center;
+  color: #f4f2f2;
+  font-size: 40px;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: #f4f2f2;
+  width: 75%;
+  text-shadow: 1px 1px 2px #ccc;
+}
+
+.row .large-12 .tagline .dp {
+  text-align: center;
+}
+
+h5 {
+  margin-left: 12%;
+  text-align: center;
+  font-style: italic;
+  color: #f4f2f2;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: #f4f2f2;
+  width: 75%;
+}
+
+h6{
+  margin-left: 4%;
+  text-align: left;
+  color: #f4f2f2;
+  font-style: italic;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: #f4f2f2;
+  width: 75%;
+}
+
+.row .large-12 .error p {
+  margin-left: 12%;
+  text-align: center;
+  color: red;
+  font-size: 15px;
+  //-webkit-text-stroke-width: 0.5px;
+  //-webkit-text-stroke-color: #66CC99;
+  width: 75%;
+}
+
+.row .content{
+  text-align: center;
+}
+
+.row .playing{
+  text-align: center;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 100px; /* bottom = footer height */
+}
+
+button, .button.disabled, .button.disabled:hover, .button.disabled:focus{
+  border-radius: 10px;
+  background-color: #0D4D08;
+  color: #FFFF00;  
+}
+
+button, .button {
+  text-align: center;
+  background-color: #c60303;
+  border-color: #c60303;
+  color: #ffffff;
+  width:100%;  
+}
+
+button .radius, .button.radius {
+  border-radius: 10px; 
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+  background-color: #930202; 
+  color: #ffffff; 
+}
+
+
+.reveal-modal,dialog {
+  /* modal dialog box */
+  background-color: #D1F7BE;
+  border-radius: 10px;
+  width: 30%;
+  padding-top: 50px;
+}
+
+.reveal-modal h2 {
+  color: #215706;
+}
+
+.row .small-3 label{
+  color: #215706;
+}
+
+#details {
+  border-radius: 10px;
+background-color: #0D4D08;
+color: #FFFF00;
+padding: 15px;
+border: solid 1px #FFFF00;
+}
+
+#metadataDisplay, #eventDisplay {
+  visibility: hidden;
+}
+
+#metadataTable {
+border-radius: 5px;
+/* color: #FFFF00; */
+background-color: #0D4D08;
+border: solid 1px #FFFF00;
+}
+
+/*tr, td, th {
+color: #FFFF00;
+background-color: #0D4D08;
+}*/
+
+table thead tr th{
+  color: #FFFF00;
+  background-color: #0D4D08;
+}
+
+table tr td{
+  color: #FFFF00;
+background-color: #0D4D08;
+}

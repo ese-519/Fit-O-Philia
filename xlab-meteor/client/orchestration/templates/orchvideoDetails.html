@@ -1,0 +1,23 @@
+<template name='orchvideoDetails'>
+    <div class="row">
+        <div class="large-12 columns">
+            <h5>{{moduleName}}</h5>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="large-12 columns">
+        <div class="row">
+            {{#each videoList}}
+            <div class="large-4 small-6 columns">
+                <video width="320" height="240" poster="{{thumbnail}}" >
+                <source src={{videoSource}} type="video/mp4">
+                </video>
+                <a href="#" id={{id}} videoSource={{videoSource}} metaSource={{metaSource}} name={{name}} class="play radius button" >Play</a>
+                <!--<a href="#" id={{id}} src={{videoSource}} metaSource={{metaSource}} name={{name}} class="play radius button" >Edit</a>-->
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    
+</template>

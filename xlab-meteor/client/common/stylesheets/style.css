@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a, a:hover, a:focus{
+  color: black;	
+}
+
+#footer{
+position: fixed;
+left: 0;
+bottom: 7px;
+width: 100%;
+}
+
+.login-link-text{
+	color:white;
+}
